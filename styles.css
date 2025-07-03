@@ -1,10 +1,15 @@
+*{ /*o * se refere a tudo!*/
+    box-sizing: border-box;
+}
+
 body{
     background-color: #0A2E4D ;
     font-family: Arial, Helvetica, sans-serif;
     height: 20px;
-    padding: 20px;
+    padding: 20px; /* Espaço interno dos itens */
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 
@@ -22,8 +27,8 @@ h2 {
 }
 
 main{
-    display: flex;
-    gap: 20px;
+    display: flex; /* Define que estamos usando flexbox */
+    gap: 20px; /* Espaço de 20 pixels entre os itens */
     margin-bottom: 20px;
     
 }
@@ -37,11 +42,65 @@ main{
     height: 400px; /*ALTURA*/
 }
 
-.sessao-menor{
-    background: #F8F9FA;
-    width: 100%; /*LARGURA*/
-    border-radius: 8px; /*Arredondar a borda*/
-    padding: 30px;
-    height: 400px; /*ALTURA*/
+.area-codigo {
+    background: #051626;
+    height: calc(100% - 70px); /*calc pega todo o espaço e subtrai a quantidade que você quiser*/
+    border-radius: 8px;
+    padding: 20px;
+    color: #F8F9FA;
+    font-size: 14px;
 }
 
+.area-resultado{
+    background: #F8F9FA;
+    border-radius: 8px;
+    height: calc(100% - 70px);
+    display: flex;
+    align-items: center; /*alinhar os itens*/ /*so pode ser utilizado quando for utilizado o display: flex*/
+    justify-content: center;
+    color: #999999;
+}
+
+.sessao-menor{
+    background: #F8F9FA;
+    border-radius: 8px; /*Arredondar a borda*/
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+input {
+    width: 80%;
+    padding: 15px 20px; /* se colocar dois valores o primeiro aplica em cima e embaixo, e o segundo aplica nos lados*/
+    font-size: 16px;
+    color: #051626;
+    border-radius: 6px;
+    border: 2px solid #94A3B8;
+}
+
+button{
+    background: #37E359;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold; /*fonte em negrito*/
+    color: #F8F9FA;
+    cursor: pointer; /*quando colocar o mouse em cima fica em formato de mãozinha*/
+    transition: 0.5s;
+}
+
+button:hover{ /*quando colocar o mouse em cima do botão*/
+    background: #52FF74;
+}
+
+button:active{ /*Quando o mouse clicar no botão vai acontecer algo*/
+    transform:scale(0.9);
+}
+
+/*
+top - em cima
+bottom - embaixo
+left - esquerda
+right - direita
+*/
