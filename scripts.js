@@ -23,6 +23,12 @@ async function cliqueiNoBotao(){
     let codigo = document.querySelector(".area-codigo")
     let areaResultado = document.querySelector(".area-resultado")
 
+    let botao = document.querySelector(".botao-magica")
+
+    botao.disabled = true;
+    botao.textContent = "Criando..."
+    botao.style.background = '#888888'
+
     //fetch - 1)O endereço 2)configurações 3) os dados
     //JSON - O formato de dados que usamos na internet
 
@@ -42,6 +48,10 @@ async function cliqueiNoBotao(){
     areaResultado.innerHTML = info.preview
 
     document.head.insertAdjacentHTML('beforeend', "<style>" + info.style +"</style>")
+
+    botao.disabled = false;
+    botao.textContent = "Criar Mágica ✨"
+    botao.style.background = '#37E359'
    
 }
 
